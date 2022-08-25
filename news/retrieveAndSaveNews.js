@@ -8,11 +8,12 @@ exports.lambdaHandler = async (event, context) => {
     try {
         let news = await axios.get('https://cryptonews-api.com/api/v1/category?section=general&items=50&token=jqgw4nacmgofhkyjddooagzd9qm776tflljgifn4');
         news = news.data.data;
+        //configure your credentials
         client = new pg.Client({
-            user: 'dbmasteruser',
-            host: 'cryptodb.cktgeluy4zgr.ap-south-1.rds.amazonaws.com',
-            database: 'cryptonews',
-            password: 'dbmasteruser',
+            user: '',
+            host: '',
+            database: '',
+            password: '',
             port: 5432,
         });
         client.connect();

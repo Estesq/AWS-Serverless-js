@@ -4,11 +4,12 @@ exports.lambdaHandler = async (event, context) => {
     let response;
     let client;
     try {
+        //configure your credentials
         client = new pg.Client({
-            user: 'dbmasteruser',
-            host: 'cryptodb.cktgeluy4zgr.ap-south-1.rds.amazonaws.com',
-            database: 'cryptonews',
-            password: 'dbmasteruser',
+            user: '',
+            host: '',
+            database: '',
+            password: '',
             port: 5432,
         });
         client.connect();
